@@ -15,8 +15,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <embed src="FINAL_LOGO_vector.svg" width="200" height="200" type="image/svg-xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
-          <!--<a class="navbar-brand" href="index.html"><img src="//images/momentum_logo.png" alt=""></a> -->
+          <!--<a class="navbar-brand" href="index.html"><img src="images/momentum_logo.png" alt=""></a> -->
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -35,7 +34,7 @@
     <!-- homepage video section start -->
     <section id="home">
 
-        <video class="text-center" autoplay="" loop="" poster='videos/christopher_smith.png' >
+        <video class="text-center" autoplay="" loop="" poster='videos/kindness_cover.png' >
           <!-- WebM/VP8 for Firefox4, Opera, and Chrome -->
           <source type="video/webm" src="videos/MOMENTUM_720p.webm">
           <!-- MP4 for Safari, IE9, iPhone, iPad, Android, and Windows Phone 7 -->
@@ -133,9 +132,11 @@
                     and build friendships.</p>
                 <div class="social-links">
                   <ul class="list-inline">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="https://www.facebook.com/kindnessismomentum/?ref=hl"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/MomentumMKC"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCONwPivvUkzcdHM5b7XTt-w"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="https://instagram.com/kindnessismomentum/"><i class="fa fa-instagram"></i></a></li>
+
                   </ul>
                 </div>
 
@@ -145,7 +146,7 @@
                     <div class="social-counter">
                       <div class="twitter-api clearfix">
                         <div class="icon">
-                          <a href="#"><i class="fa fa-twitter"></i></a>
+                          <a href="https://twitter.com/MomentumMKC"><i class="fa fa-twitter"></i></a>
                         </div>
                         <div class="counter">
                           <span class="timer">84244</span>
@@ -154,7 +155,7 @@
                       </div><!-- /.twitter-api -->
                       <div class="facebook-api clearfix">
                         <div class="icon">
-                          <a href="#"><i class="fa fa-facebook"></i></a>
+                          <a href="https://www.facebook.com/kindnessismomentum/?ref=hl"><i class="fa fa-facebook"></i></a>
                         </div>
                         <div class="counter">
                           <span class="timer">4964</span>
@@ -397,9 +398,9 @@
         <h3>I'm social, You can follow me</h3>
         <div class="social-links">
           <ul class="list-inline">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="https://www.facebook.com/kindnessismomentum/?ref=hl"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/MomentumMKC"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCONwPivvUkzcdHM5b7XTt-w"><i class="fa fa-youtube"></i></a></li>
           </ul>
         </div>
 

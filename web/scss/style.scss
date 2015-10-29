@@ -277,7 +277,10 @@ hr::after {
   padding: 8px 15px;
   border-radius: 0;
 }
-
+video {
+    width: 100% !important;
+    height: auto !important;
+}
 /* =-=-=-=-=-=-= Navigation =-=-=-=-=-=-= */
 
 @media(min-width:768px) {
