@@ -48,10 +48,9 @@
 /* =-=-=-=-=-=-= General =-=-=-=-=-=-= */
 
 /* Sass Global Variables */
-$secondary_color: #51C9EF;
-
-$theme_color: #008F93;
-$tertiary_color: #00588C;
+$theme_color: #54ADAE;
+$secondary_color: #497DA3;
+$old_theme: #ef4836;
 
 body{
     font-family: 'Open Sans', sans-serif;
@@ -276,6 +275,11 @@ hr::after {
 .alert {
   padding: 8px 15px;
   border-radius: 0;
+}
+
+video {
+    width: 100% !important;
+    height: auto !important;
 }
 
 /* =-=-=-=-=-=-= Navigation =-=-=-=-=-=-= */
