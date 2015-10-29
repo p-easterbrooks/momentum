@@ -15,7 +15,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <object type="image/svg+xml" data="images/FINAL_LOGO_vector.svg">Your browser does not support SVG</object>
+            <embed src="FINAL_LOGO_vector.svg" width="200" height="200" type="image/svg-xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
           <!--<a class="navbar-brand" href="index.html"><img src="//images/momentum_logo.png" alt=""></a> -->
         </div>
 
