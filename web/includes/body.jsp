@@ -55,24 +55,38 @@
           <p>By signing this pledge you promise to engage in<br> at least one random act of kindness</p>
         </div>
 
-        <form class="text-center" name="contact-form" id="contactForm" action="sendemail.php" method="POST">
+        <form class="text-center" name="pledge-form" id="contactForm" action="pledge" method="POST">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                     <div class="form-group">
                       <label class="sr-only" for="name">Name</label>
                       <input type="text" name="name" class="form-control" id="name" placeholder="Name">
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                     <div class="form-group">
                       <label class="sr-only" for="email">Email</label>
                       <input type="email" name="email" class="form-control" id="email" placeholder="Email">
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-sm-4">
                     <div class="form-group">
-                      <label class="sr-only" for="subject">Subject</label>
-                      <input type="text" name="subject" class="form-control" id="subject" placeholder="Subject">
+                      <label class="sr-only" for="city">City</label>
+                      <input type="text" name="city" class="form-control" id="city" placeholder="City">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                      <label class="sr-only" for="state">State</label>
+                      <input type="text" name="state" class="form-control" id="state" placeholder="State">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                      <label class="sr-only" for="country">Country</label>
+                      <input type="text" name="country" class="form-control" id="country" placeholder="Country">
                     </div>
                 </div>
             </div>
@@ -82,7 +96,7 @@
               <textarea name="message" class="form-control" id="message" placeholder="Leave me a message"></textarea>
             </div>
 
-            <button type="submit" name="submit" class="btn btn-primary btn-lg">send message</button>
+            <button type="submit" name="submit" class="btn btn-primary btn-lg">Take the pledge</button>
         </form>
 
       </div>
@@ -177,59 +191,6 @@
       </div>
     </section>
     <!-- about-section end -->
-    
-    <!-- testimonial-section start-->
-    <section class="testimonial-section"  data-stellar-background-ratio="0.5">
-      <div class="testimonial-overlay">
-        <div class="container">
-          <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#testimonialCarousel" data-slide-to="1"></li>
-              <li data-target="#testimonialCarousel" data-slide-to="2"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-
-              <div class="item active">
-                <div class="row">
-                  <div class="col-md-10 col-md-offset-1">
-                    <blockquote>
-                      <i class="fa fa-quote-left"></i>
-                      <p>Uniquely facilitate client-based metrics for B2B quality vectors. Interactively monetize adaptive applications for real-time e-services. Intrinsicly strategize tactical platforms.</p>
-                      <footer>Bin Burhan, <cite title="Source Title">CNN</cite></footer>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="col-md-10 col-md-offset-1">
-                  <blockquote>
-                    <i class="fa fa-quote-left"></i>
-                    <p>Uniquely facilitate client-based metrics for B2B quality vectors. Interactively monetize adaptive applications for real-time e-services. Intrinsicly strategize tactical platforms.</p>
-                    <footer>Bin Burhan, <cite title="Source Title">CNN</cite></footer>
-                  </blockquote>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="col-md-10 col-md-offset-1">
-                  <blockquote>
-                    <i class="fa fa-quote-left"></i>
-                    <p>Uniquely facilitate client-based metrics for B2B quality vectors. Interactively monetize adaptive applications for real-time e-services. Intrinsicly strategize tactical platforms.</p>
-                    <footer>Bin Burhan, <cite title="Source Title">CNN</cite></footer>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-          </div><!-- /.carousel -->
-        </div><!-- /.container -->
-      </div>
-    </section>
-    <!-- testimonial-section end-->
 
     <!-- story-section start-->
     <section id="story" class="story-section">

@@ -13,13 +13,13 @@ public class Database {
     private static final String DRIVER = "org.postgresql.Driver";
 
     /** Database connection string. */
-    private static final String DB_URL = "jdbc:postgresql://kindnessismomentum.org/postgres";
+    private static final String DB_URL = "jdbc:postgresql://kindnessismomentum.org/momentum";
 
     /** Database user name. */
     private static final String DB_USER = "postgres";
 
     /** Database password. */
-    private static final String DB_PASS = "dukeDOG15";
+    private static final String DB_PASS = "pass";
 
     /**
      * Static block; loads the JDBC driver.
