@@ -111,7 +111,8 @@
             <div class="row text-center">
                 <div class="counter-wrapper">
                   <span class="icon"><i class="flaticon-businessman20"></i></span>
-                  <form class="timer" action="count" method="GET">${pledge_count}</form>
+                  <span class="timer">581</span>
+                  <% //<form class="timer" action="count" method="GET">${pledge_count}</form> %>
                   <span class="description">People have taken the pledge</span>
                 </div> <!-- /.col-sm-3 -->
             </div>
