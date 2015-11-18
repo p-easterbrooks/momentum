@@ -19,7 +19,7 @@ public class Database {
     private static final String DB_USER = "postgres";
 
     /** Database password. */
-    private static final String DB_PASS = "pass";
+    private static final String DB_PASS = "dukeDOG15";
 
     /**
      * Static block; loads the JDBC driver.

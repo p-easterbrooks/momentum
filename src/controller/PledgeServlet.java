@@ -6,11 +6,12 @@
 package controller;
 
 import java.io.IOException;
+import static java.lang.System.out;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;import java.util.logging.Level;
+import java.sql.SQLException;
+import java.util.logging.Level;
 import java.util.logging.Logger;
-;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -51,7 +52,6 @@ public class PledgeServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("reached");
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String city = request.getParameter("city");
@@ -81,7 +81,7 @@ public class PledgeServlet extends HttpServlet {
             st.setString(2, email);
             st.executeUpdate();
         } catch (SQLException ex) {
-            Logger.getLogger(PledgeServlet.class.getName()).log(Level.SEVERE, null, ex);;
+            Logger.getLogger(PledgeServlet.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
         

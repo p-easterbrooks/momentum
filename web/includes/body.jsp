@@ -34,7 +34,7 @@
     <!-- homepage video section start -->
     <section id="home">
 
-        <video class="text-center" autoplay="" loop="" poster='videos/kindness_cover.png' >
+        <video class="text-center" autoplay="" loop="" poster='videos/kindness_cover.png' muted >
           <!-- WebM/VP8 for Firefox4, Opera, and Chrome -->
           <source type="video/webm" src="videos/MOMENTUM_720p.webm">
           <!-- MP4 for Safari, IE9, iPhone, iPad, Android, and Windows Phone 7 -->
@@ -60,13 +60,13 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                       <label class="sr-only" for="name">Name</label>
-                      <input type="text" name="name" class="form-control" id="name" placeholder="Name">
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Name" required>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
                       <label class="sr-only" for="email">Email</label>
-                      <input type="email" name="email" class="form-control" id="email" placeholder="Email">
+                      <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                 <div class="col-sm-4">
                     <div class="form-group">
                       <label class="sr-only" for="city">City</label>
-                      <input type="text" name="city" class="form-control" id="city" placeholder="City">
+                      <input type="text" name="city" class="form-control" id="city" placeholder="City" required>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -86,7 +86,7 @@
                 <div class="col-sm-4">
                     <div class="form-group">
                       <label class="sr-only" for="country">Country</label>
-                      <input type="text" name="country" class="form-control" id="country" placeholder="Country">
+                      <input type="text" name="country" class="form-control" id="country" placeholder="Country" required>
                     </div>
                 </div>
             </div>
@@ -111,7 +111,7 @@
             <div class="row text-center">
                 <div class="counter-wrapper">
                   <span class="icon"><i class="flaticon-businessman20"></i></span>
-                  <span class="timer">6611</span>
+                  <form class="timer" action="count" method="GET">${pledge_count}</form>
                   <span class="description">People have taken the pledge</span>
                 </div> <!-- /.col-sm-3 -->
             </div>
