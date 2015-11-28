@@ -7,27 +7,19 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.Database;
+import model.PledgeCount;
 
 /**
  *
  * @author pauleasterbrooks
  */
-@WebServlet(name = "CounterServlet", urlPatterns = {"/count"})
-public class CounterServlet extends HttpServlet {
+@WebServlet(name = "MainServlet", urlPatterns = {"/index"})
+public class MainServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,19 +32,7 @@ public class CounterServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        int pledge = getPledgeCount();
-        Logger.getLogger(CounterServlet.class.getName()).log(Level.SEVERE, null, "Count: " + pledge);
-        System.out.println("Count: " + pledge);
         
-        request.setAttribute("pledge", pledge);
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
-        response.sendRedirect("index.jsp");
-        
-        /*RequestDispatcher dispatcher = request.getRequestDispatcher("/body.jsp");
-         if (dispatcher != null)
-         {
-            dispatcher.forward(request, response);
-         }*/ 
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -67,7 +47,10 @@ public class CounterServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //retrieve pledge count
+        int pledgeCount = getPledgeCount();
+        request.setAttribute("pledge_count", pledgeCount);
+        
     }
 
     /**
@@ -94,32 +77,10 @@ public class CounterServlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
     
-    
-    /**
-     * Accesses database and retrieve number of rows from the user table
-     * @return 
-     */
     private int getPledgeCount()
     {
-        int rv = -1;
-        String count_users = "SELECT COUNT(name) FROM users;";
-        
-        try (
-                Connection connection = Database.open();
-                Statement st = connection.createStatement();
-                ResultSet rs = st.executeQuery(count_users);  
-            ) {
-            rs.next();
-            rv = rs.getInt(1);
-            //free up assets
-            st.close();
-            rs.close();
-        } catch (SQLException ex) {
-            Logger.getLogger(PledgeServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        
-        return rv;
+        PledgeCount pc = new PledgeCount();
+        return pc.getPledgeCount();
     }
 
 }

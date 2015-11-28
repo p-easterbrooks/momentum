@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebServlet;
 import model.Database;
+import model.Pledge;
 
 /**
  *
@@ -52,13 +53,11 @@ public class PledgeServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String name = request.getParameter("name");
-        String email = request.getParameter("email");
-        String city = request.getParameter("city");
-        String state = request.getParameter("state");
-        String country = request.getParameter("country");
+        Pledge p = new Pledge(request.getParameter("name"), 
+                request.getParameter("email"), request.getParameter("city"), 
+        request.getParameter("state"), request.getParameter("country"));
         
-        addPledge(name, email, city, state, country);
+        addPledge(p);
         response.sendRedirect("index.jsp");
     }
 
@@ -73,12 +72,12 @@ public class PledgeServlet extends HttpServlet {
     }// </editor-fold>
     
     
-    private boolean addPledge(String name, String email, String city, String state, String country) {
+    private boolean addPledge(Pledge p) {
         String insert_user = "INSERT INTO users VALUES(?, ?);";
         try (Connection connection = Database.open();
                 PreparedStatement st = connection.prepareStatement(insert_user)) {
-            st.setString(1, name);
-            st.setString(2, email);
+            st.setString(1, p.getName());
+            st.setString(2, p.getEmail());
             st.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(PledgeServlet.class.getName()).log(Level.SEVERE, null, ex);
@@ -88,9 +87,9 @@ public class PledgeServlet extends HttpServlet {
         String insert_location = "INSERT INTO locations VALUES(?, ?, ?);";;
         try (Connection connection = Database.open();
                 PreparedStatement st = connection.prepareStatement(insert_location)) {
-            st.setString(1, city);
-            st.setString(2, state);
-            st.setString(3, country);
+            st.setString(1, p.getCity());
+            st.setString(2, p.getState());
+            st.setString(3, p.getCountry());
             st.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(PledgeServlet.class.getName()).log(Level.SEVERE, null, ex);;

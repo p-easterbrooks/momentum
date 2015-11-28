@@ -1,9 +1,8 @@
-<%-- 
-    Document   : body
-    Created on : Oct 15, 2015, 12:53:02 AM
-    Author     : pauleasterbrooks
---%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="model.PledgeCount" %>
+    <%
+        PledgeCount count = new PledgeCount();
+    %>
 <body data-spy="scroll" data-target=".navbar-fixed-top">
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -111,8 +110,8 @@
             <div class="row text-center">
                 <div class="counter-wrapper">
                   <span class="icon"><i class="flaticon-businessman20"></i></span>
-                  <span class="timer">581</span>
-                  <% //<form class="timer" action="count" method="GET">${pledge_count}</form> %>
+                  <% //<span class="timer">581</span> %>
+                  <span class="timer"><%= count.getPledgeCount() %></span>
                   <span class="description">People have taken the pledge</span>
                 </div> <!-- /.col-sm-3 -->
             </div>
