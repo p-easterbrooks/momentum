@@ -33,7 +33,7 @@
     <!-- homepage video section start -->
     <section id="home">
 
-        <video class="text-center" autoplay="" loop="" poster='videos/kindness_cover.png' muted >
+        <video class="text-center" autoplay="" loop="" poster='videos/kindness_cover.png' >
           <!-- WebM/VP8 for Firefox4, Opera, and Chrome -->
           <source type="video/webm" src="videos/MOMENTUM_720p.webm">
           <!-- MP4 for Safari, IE9, iPhone, iPad, Android, and Windows Phone 7 -->
@@ -163,8 +163,8 @@
                           <a href="https://twitter.com/MomentumMKC"><i class="fa fa-twitter"></i></a>
                         </div>
                         <div class="counter">
-                          <span class="timer">84244</span>
-                          <span class="title">Follower</span>
+                          <span class="timer">648</span>
+                          <span class="title">Followers</span>
                         </div>
                       </div><!-- /.twitter-api -->
                       <div class="facebook-api clearfix">
@@ -172,19 +172,10 @@
                           <a href="https://www.facebook.com/kindnessismomentum/?ref=hl"><i class="fa fa-facebook"></i></a>
                         </div>
                         <div class="counter">
-                          <span class="timer">4964</span>
-                          <span class="title">Friends</span>
+                          <span class="timer">873</span>
+                          <span class="title">Likes</span>
                         </div>
                       </div><!-- /.facebook-api -->
-                      <div class="google-api clearfix">
-                        <div class="icon">
-                          <a href="#"><i class="fa fa-google-plus"></i></a>
-                        </div>
-                        <div class="counter">
-                          <span class="timer">54654</span>
-                          <span class="title">Circle</span>
-                        </div>
-                      </div><!-- /.google-api -->
                     </div><!-- /.right-section -->
                 </div><!-- /.col-md-6 -->
           </div>
@@ -310,7 +301,7 @@
       </div>
     </section>
     <!-- story-section end-->
-    
+    <% /* Contact and map sections DISABLED 
     <!-- newsletter-section start -->
     <section class="newsletter-section" id="newsletter" data-stellar-background-ratio="0.5">
       <div class="tt-overlay">
@@ -351,10 +342,11 @@
         </div><!-- /.container-fluid -->
     </section>
     <!-- location-section end -->
+    */ %>
 
 
     <!-- footer-section start -->
-    <footer class="footer-section text-center">
+    <footer id="newsletter" class="footer-section text-center">
       <div class="container">
         <h3>I'm social, You can follow me</h3>
         <div class="social-links">
